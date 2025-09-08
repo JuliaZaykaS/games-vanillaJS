@@ -1,0 +1,29 @@
+#task-1
+.dnd_OneToOne_dropPlace{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin:5px;
+}
+#task-1
+.dnd_OneToOne_dropPlaceWrapper {
+    width: 100%;
+    display: block;
+  
+}
+#task-1
+.dnd_OneToOne_dropPlace_box {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#task-1
+.dnd_OneToOne_dropPicture_box{
+margin:0;
+padding:0;
+}

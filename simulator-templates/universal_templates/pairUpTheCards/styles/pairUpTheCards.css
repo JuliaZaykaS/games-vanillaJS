@@ -1,0 +1,119 @@
+.pairUpTheCards_cardsWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  -webkit-box-pack: center;
+
+  -ms-flex-pack: center;
+
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  gap: var(--gap-M);
+
+  height: 530px;
+}
+
+.pairUpTheCards_card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: pointer;
+  gap: var(--gap-S);
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+ /* -webkit-box-shadow: var(--normal-box-shadow);
+  box-shadow: var(--normal-box-shadow);*/
+
+  padding: var(--padding-S);
+  border-radius: var(--normal-border-radius);
+
+ /* -webkit-transition:  var(--normal-transition);
+  -o-transition:  var(--normal-transition);
+  transition:  var(--normal-transition);*/
+}
+
+.pairUpTheCards_card.targetChoice_color {
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/*.pairUpTheCards_card:hover {
+  -webkit-box-shadow: var(--normal-hover-box-shadow);
+  box-shadow: var(--normal-hover-box-shadow);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}*/
+
+.pairUpTheCards_card:hover .zoom_open_button_white {
+  opacity: 1;
+  -webkit-transition: opacity var(--normal-transition);
+  -o-transition: opacity var(--normal-transition);
+  transition: opacity var(--normal-transition);
+}
+
+.pairUpTheCards_cardImg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  -webkit-box-sizing: border-box;
+
+  box-sizing: border-box;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.pairUpTheCards_cardTitle {
+  font-size: var(--font-size-XL);
+  text-align: center;
+}
+
+@media screen and (max-width: 1366px) {
+  .pairUpTheCards_cardsWrapper {
+    height: 490px;
+  }
+  .pairUpTheCards_cardTitle {
+    font-size: var(--font-size-L);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .pairUpTheCards_cardsWrapper {
+    height: 390px;
+  }
+  .pairUpTheCards_cardTitle {
+    font-size: var(--font-size-S);
+  }
+}

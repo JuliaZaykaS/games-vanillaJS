@@ -1,0 +1,200 @@
+.singleChoice_3_Wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.singleChoice_3_Wrapper_vertical {
+  height: 580px;
+}
+
+.singleChoice_3_List {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: var(--gap-M);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  height: 100%;
+}
+
+.singleChoice_3_Item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: var(--padding-M);
+
+  border-radius: var(--normal-border-radius);
+  gap: var(--gap-M);
+
+ /* -webkit-box-shadow: var(--normal-box-shadow);
+  box-shadow: var(--normal-box-shadow);*/
+  -webkit-box-sizing: border-box;
+
+  box-sizing: border-box;
+  position: relative;
+  /*-webkit-transition: all var(--normal-transition);
+
+  -o-transition: all var(--normal-transition);
+
+  transition: all var(--normal-transition);*/
+
+}
+
+.singleChoice_3_Item:hover .zoom_open_button_white {
+  opacity: 1;
+  -webkit-transition: opacity var(--normal-transition);
+  -o-transition: opacity var(--normal-transition);
+  transition: opacity var(--normal-transition);
+}
+
+.singleChoice_3_Item_vertical {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.singleChoice_3_ImageBox {
+  width: 100%;
+  height: 75%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+
+  -webkit-box-sizing: border-box;
+
+  box-sizing: border-box;
+}
+
+.singleChoice_3_ImageBox_horizontal {
+  width: 100%;
+}
+.singleChoice_3_ImageBox_horizontal_big {
+  height: 280px;
+}
+.singleChoice_3_ImageBox_horizontal_middle {
+  height: 250px;
+}
+.singleChoice_3_ImageBox_horizontal_small {
+  height: 180px;
+}
+
+.singleChoice_3_ImageBox_vertical {
+  height: 100%;
+  width: 90%;
+}
+
+.singleChoice_3_ImageBox_vertical_withText {
+  height: 100%;
+  width: 50%;
+}
+
+.singleChoice_3_Title {
+  font-size: var(--font-size-XL);
+  font-weight: 700;
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.singleChoice_3_Item_vertical .singleChoice_3_Title {
+  width: 50%;
+}
+
+/*.singleChoice_3_Item:hover {
+  -webkit-box-shadow: var(--normal-hover-box-shadow);
+  box-shadow: var(--normal-hover-box-shadow);
+  
+  -webkit-transition: all var(--normal-transition);
+  -o-transition: all var(--normal-transition);
+  transition: all var(--normal-transition);
+}*/
+
+.singleChoice_3_enlarge_picture {
+  margin-left: auto;
+  margin-right: var(--margin-M);
+}
+
+@media screen and (max-width: 1366px) {
+  .singleChoice_3_Wrapper_vertical {
+    height: 540px;
+  }
+
+  .singleChoice_3_ImageBox_horizontal_big {
+    height: 250px;
+  }
+  .singleChoice_3_ImageBox_horizontal_middle {
+    height: 200px;
+  }
+  .singleChoice_3_ImageBox_horizontal_small {
+    height: 165px;
+  }
+
+  .singleChoice_3_ImageBox {
+    height: 70%;
+  }
+  .singleChoice_3_Title {
+    font-size: var(--font-size-M);
+    max-height: 80px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .singleChoice_3_Wrapper_vertical {
+    height: 445px;
+  }
+  .singleChoice_3_Item {
+    padding: var(--padding-S);
+    gap: var(--gap-S);
+  }
+
+  .singleChoice_3_ImageBox_horizontal_big {
+    height: 195px;
+  }
+  .singleChoice_3_ImageBox_horizontal_middle {
+    height: 180px;
+  }
+  .singleChoice_3_ImageBox_horizontal_small {
+    height: 127px;
+  }
+
+  .singleChoice_3_ImageBox {
+    height: 65%;
+  }
+
+  .singleChoice_3_Title {
+    font-size: var(--font-size-XS);
+    max-height: 80px;
+  }
+
+  .singleChoice_3_Item_vertical .singleChoice_3_Title {
+    text-align: center;
+  }
+}

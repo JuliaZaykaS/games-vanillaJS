@@ -1,0 +1,923 @@
+.dnd_scales_comparePicturesWrapper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dnd_scales_dropPlaceWrapper {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+
+  -ms-flex-direction: column;
+
+  flex-direction: column;
+
+  -webkit-box-pack: end;
+
+  -ms-flex-pack: end;
+
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  margin-bottom: var(--margin-M);
+  position: relative;
+
+  height: 410px;
+}
+
+.dnd_scales_bowlOfScales,
+.dnd_scales_scaleBase {
+  width: 70%;
+
+  -webkit-box-sizing: border-box;
+
+  box-sizing: border-box;
+}
+
+.dnd_scales_bowlOfScales {
+  height: 410px;
+
+  position: absolute;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  -webkit-box-align: center;
+
+  -ms-flex-align: center;
+
+  align-items: center;
+  top: 0;
+}
+
+.dnd_scales_scaleBase {
+  height: 120px;
+}
+
+.dnd_scales_dragPlaceWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.dnd_scales_dragPicture {
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: auto;
+
+  overflow: hidden;
+}
+
+.dnd_scales_dropPlacePart {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border: var(--border-dashed-drop-elements);
+  border-radius: var(--normal-border-radius);
+
+  bottom: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  -webkit-box-align: end;
+
+  -ms-flex-align: end;
+
+  align-items: flex-end;
+
+  -webkit-transform: none;
+
+  -ms-transform: none;
+
+  transform: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.dnd_scales_dropPlacePart_left {
+  left: 2%;
+}
+
+.dnd_scales_dropPlacePart_right {
+  right: 2%;
+}
+
+.dnd_scales_dragPicture_box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  width: 145px;
+  height: 145px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: -webkit-grab;
+  cursor: grab;
+  visibility: visible;
+  -ms-touch-action: none;
+  touch-action: none;
+  border-radius: var(--normal-border-radius);
+}
+
+.dnd_scales_sliderContent {
+  height: 160px;
+}
+
+/* АНИМАЦИИ */
+/* для перекладины весов, чтобы можно было ее анимировать */
+#crossbar {
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  /* anything other than `0 0` to see the effect */
+  transform-box: fill-box;
+}
+
+/* анимация для перекладины весов вправо */
+.dnd_scales_animation_right {
+  -webkit-transform: rotate(15deg) translate(12px);
+  -ms-transform: rotate(15deg) translate(12px);
+  transform: rotate(15deg) translate(12px);
+
+  -webkit-transition: var(--normal-transition);
+
+  -o-transition: var(--normal-transition);
+
+  transition: var(--normal-transition);
+}
+
+/* анимация для перекладины весов влево */
+.dnd_scales_animation_left {
+  -webkit-transform: rotate(-15deg) translate(-15px);
+  -ms-transform: rotate(-15deg) translate(-15px);
+  transform: rotate(-15deg) translate(-15px);
+
+  -webkit-transition: var(--normal-transition);
+
+  -o-transition: var(--normal-transition);
+
+  transition: var(--normal-transition);
+}
+
+/* отключение анимации на всех элементах */
+.dnd_scales_animation_none {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+
+  -webkit-transition: var(--normal-transition);
+
+  -o-transition: var(--normal-transition);
+
+  transition: var(--normal-transition);
+}
+
+/* анимация для левой чаши вверх */
+.dnd_scales_animation_leftB_top {
+  -webkit-transform: translateX(30px) translateY(-120px);
+  -ms-transform: translateX(30px) translateY(-120px);
+  transform: translateX(30px) translateY(-120px);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/* анимация для правой чаши вниз */
+
+.dnd_scales_animation_rightB_bottom {
+  -webkit-transform: translateX(5px) translateY(120px);
+  -ms-transform: translateX(5px) translateY(120px);
+  transform: translateX(5px) translateY(120px);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/* анимация для правой чаши вверх */
+
+.dnd_scales_animation_rightB_top {
+  -webkit-transform: translateX(-30px) translateY(-110px);
+  -ms-transform: translateX(-30px) translateY(-110px);
+  transform: translateX(-30px) translateY(-110px);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/* анимация для левой чаши вниз */
+
+.dnd_scales_animation_leftB_bottom {
+  -webkit-transform: translateX(-10px) translateY(120px);
+  -ms-transform: translateX(-10px) translateY(120px);
+  transform: translateX(-10px) translateY(120px);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/* анимация для левого поля, куда перемещаем предмет вверх */
+
+.dnd_scales_animation_dppL_top {
+  -webkit-transform: translateX(15px) translateY(-55px);
+  -ms-transform: translateX(15px) translateY(-55px);
+  transform: translateX(15px) translateY(-55px);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/* анимация для правого поля, куда перемещаем предмет вниз */
+
+.dnd_scales_animation_dppR_bottom {
+  -webkit-transform: translateX(2px) translateY(56px);
+  -ms-transform: translateX(2px) translateY(56px);
+  transform: translateX(2px) translateY(56px);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/* анимация для правого поля, куда перемещаем предмет вверх */
+
+.dnd_scales_animation_dppR_top {
+  -webkit-transform: translateX(-11px) translateY(-50px);
+  -ms-transform: translateX(-11px) translateY(-50px);
+  transform: translateX(-11px) translateY(-50px);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/* анимация для левого поля, куда перемещаем предмет вниз */
+
+.dnd_scales_animation_dppL_bottom {
+  -webkit-transform: translateX(-5px) translateY(56px);
+  -ms-transform: translateX(-5px) translateY(56px);
+  transform: translateX(-5px) translateY(56px);
+  -webkit-transition: var(--normal-transition);
+  -o-transition: var(--normal-transition);
+  transition: var(--normal-transition);
+}
+
+/* анимации для отображения состояния равенства на весах */
+/* анимация для левой чаши */
+
+.dnd_scales_leftBowlAnim {
+  -webkit-animation: leftSideAnimation 3s ease-in-out;
+  animation: leftSideAnimation 3s ease-in-out;
+}
+
+/* анимация для левого поля над чашей */
+
+.dnd_scales_leftPartAnim {
+  -webkit-animation: leftPartAnimation 3s ease-in-out;
+  animation: leftPartAnimation 3s ease-in-out;
+}
+
+/* анимация для правой чаши */
+
+.dnd_scales_rightBowlAnim {
+  -webkit-animation: rightSideAnimation 3s ease-in-out;
+  animation: rightSideAnimation 3s ease-in-out;
+}
+
+/* анимация для правого поля над чашей */
+
+.dnd_scales_rightPartAnim {
+  -webkit-animation: rightPartAnimation 3s ease-in-out;
+  animation: rightPartAnimation 3s ease-in-out;
+}
+
+/* анимация для перекладины весов */
+.dnd_scales_crossbarAnim {
+  -webkit-animation: crossbarAnimation 3s ease-in-out;
+  animation: crossbarAnimation 3s ease-in-out;
+}
+
+@-webkit-keyframes leftSideAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: translateX(-10px) translateY(120px);
+    transform: translateX(-10px) translateY(120px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: translateX(25px) translateY(-110px);
+    transform: translateX(25px) translateY(-110px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes leftSideAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: translateX(-10px) translateY(120px);
+    transform: translateX(-10px) translateY(120px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: translateX(25px) translateY(-110px);
+    transform: translateX(25px) translateY(-110px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes leftPartAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: translateX(-5px) translateY(56px);
+    transform: translateX(-5px) translateY(56px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: translateX(15px) translateY(-50px);
+    transform: translateX(15px) translateY(-50px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes leftPartAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: translateX(-5px) translateY(56px);
+    transform: translateX(-5px) translateY(56px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: translateX(15px) translateY(-50px);
+    transform: translateX(15px) translateY(-50px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes rightSideAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: translateX(-30px) translateY(-110px);
+    transform: translateX(-30px) translateY(-110px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: translateX(5px) translateY(120px);
+    transform: translateX(5px) translateY(120px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes rightSideAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: translateX(-30px) translateY(-110px);
+    transform: translateX(-30px) translateY(-110px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: translateX(5px) translateY(120px);
+    transform: translateX(5px) translateY(120px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes rightPartAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: translateX(-11px) translateY(-50px);
+    transform: translateX(-11px) translateY(-50px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: translateX(2px) translateY(56px);
+    transform: translateX(2px) translateY(56px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes rightPartAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: translateX(-11px) translateY(-50px);
+    transform: translateX(-11px) translateY(-50px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: translateX(2px) translateY(56px);
+    transform: translateX(2px) translateY(56px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes crossbarAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: rotate(-15deg) translate(-15px);
+    transform: rotate(-15deg) translate(-15px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: rotate(15deg) translate(12px);
+    transform: rotate(15deg) translate(12px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes crossbarAnimation {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  25% {
+    -webkit-transform: rotate(-15deg) translate(-15px);
+    transform: rotate(-15deg) translate(-15px);
+  }
+
+  /* 50% {
+    transform: none;
+  } */
+  75% {
+    -webkit-transform: rotate(15deg) translate(12px);
+    transform: rotate(15deg) translate(12px);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .dnd_scales_dropPlaceWrapper {
+    height: 390px;
+  }
+
+  .dnd_scales_bowlOfScales {
+    height: 390px;
+  }
+
+  .dnd_scales_scaleBase {
+    height: 110px;
+  }
+
+  .dnd_scales_dropPlacePart {
+    width: 130px;
+    height: 130px;
+    bottom: 49%;
+  }
+
+  .dnd_scales_dropPlacePart_left {
+    left: 3%;
+  }
+
+  .dnd_scales_dropPlacePart_right {
+    right: 3%;
+  }
+
+  .dnd_scales_dragPicture_box {
+    width: 125px;
+    height: 125px;
+  }
+
+  .dnd_scales_sliderContent {
+    height: 140px;
+  }
+
+  .dnd_scales_animation_dppL_top {
+    -webkit-transform: translateX(14px) translateY(-52px);
+    -ms-transform: translateX(14px) translateY(-52px);
+    transform: translateX(14px) translateY(-52px);
+  }
+
+  .dnd_scales_animation_dppR_bottom {
+    -webkit-transform: translateX(3px) translateY(53px);
+    -ms-transform: translateX(3px) translateY(53px);
+    transform: translateX(3px) translateY(53px);
+  }
+
+  .dnd_scales_animation_dppR_top {
+    -webkit-transform: translateX(-12px) translateY(-46px);
+    -ms-transform: translateX(-12px) translateY(-46px);
+    transform: translateX(-12px) translateY(-46px);
+  }
+
+  .dnd_scales_animation_dppL_bottom {
+    -webkit-transform: translateX(-3px) translateY(53px);
+    -ms-transform: translateX(-3px) translateY(53px);
+    transform: translateX(-3px) translateY(53px);
+  }
+
+  @-webkit-keyframes leftPartAnimation {
+    0% {
+      -webkit-transform: none;
+      transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateX(-5px) translateY(56px);
+      transform: translateX(-5px) translateY(56px);
+    }
+
+    /* 50% {
+    transform: none;
+  } */
+    75% {
+      -webkit-transform: translateX(10px) translateY(-48px);
+      transform: translateX(10px) translateY(-48px);
+    }
+
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes leftPartAnimation {
+    0% {
+      -webkit-transform: none;
+      transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateX(-5px) translateY(56px);
+      transform: translateX(-5px) translateY(56px);
+    }
+
+    /* 50% {
+    transform: none;
+  } */
+    75% {
+      -webkit-transform: translateX(10px) translateY(-48px);
+      transform: translateX(10px) translateY(-48px);
+    }
+
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @-webkit-keyframes rightPartAnimation {
+    0% {
+      -webkit-transform: none;
+      transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateX(-11px) translateY(-50px);
+      transform: translateX(-11px) translateY(-50px);
+    }
+
+    /* 50% {
+    transform: none;
+  } */
+    75% {
+      -webkit-transform: translateX(2px) translateY(54px);
+      transform: translateX(2px) translateY(54px);
+    }
+
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes rightPartAnimation {
+    0% {
+      -webkit-transform: none;
+      transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateX(-11px) translateY(-50px);
+      transform: translateX(-11px) translateY(-50px);
+    }
+
+    /* 50% {
+    transform: none;
+  } */
+    75% {
+      -webkit-transform: translateX(2px) translateY(54px);
+      transform: translateX(2px) translateY(54px);
+    }
+
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .dnd_scales_dropPlaceWrapper {
+    height: 320px;
+  }
+
+  .dnd_scales_bowlOfScales {
+    height: 320px;
+  }
+
+  .dnd_scales_scaleBase {
+    height: 90px;
+  }
+
+  .dnd_scales_dropPlacePart {
+    width: 110px;
+    height: 110px;
+
+    bottom: 47%;
+  }
+
+  .dnd_scales_dropPlacePart_left {
+    left: 2%;
+  }
+
+  .dnd_scales_dropPlacePart_right {
+    right: 2%;
+  }
+
+  .dnd_scales_dragPicture_box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dnd_scales_sliderContent {
+    height: 110px;
+  }
+
+  .dnd_scales_animation_dppL_top {
+    -webkit-transform: translateX(11px) translateY(-39px);
+    -ms-transform: translateX(11px) translateY(-39px);
+    transform: translateX(11px) translateY(-39px);
+  }
+
+  .dnd_scales_animation_dppR_bottom {
+    -webkit-transform: translateX(0px) translateY(42px);
+    -ms-transform: translateX(0px) translateY(42px);
+    transform: translateX(0px) translateY(42px);
+  }
+
+  .dnd_scales_animation_dppR_top {
+    -webkit-transform: translateX(-10px) translateY(-36px);
+    -ms-transform: translateX(-10px) translateY(-36px);
+    transform: translateX(-10px) translateY(-36px);
+  }
+
+  .dnd_scales_animation_dppL_bottom {
+    -webkit-transform: translateX(-2px) translateY(42px);
+    -ms-transform: translateX(-2px) translateY(42px);
+    transform: translateX(-2px) translateY(42px);
+  }
+
+  @-webkit-keyframes leftPartAnimation {
+    0% {
+      -webkit-transform: none;
+      transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateX(1px) translateY(40px);
+      transform: translateX(1px) translateY(40px);
+    }
+
+    /* 50% {
+    transform: none;
+  } */
+    75% {
+      -webkit-transform: translateX(10px) translateY(-37px);
+      transform: translateX(10px) translateY(-37px);
+    }
+
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes leftPartAnimation {
+    0% {
+      -webkit-transform: none;
+      transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateX(1px) translateY(40px);
+      transform: translateX(1px) translateY(40px);
+    }
+
+    /* 50% {
+    transform: none;
+  } */
+    75% {
+      -webkit-transform: translateX(10px) translateY(-37px);
+      transform: translateX(10px) translateY(-37px);
+    }
+
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @-webkit-keyframes rightPartAnimation {
+    0% {
+      -webkit-transform: none;
+      transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateX(-11px) translateY(-40px);
+      transform: translateX(-11px) translateY(-40px);
+    }
+
+    /* 50% {
+    transform: none;
+  } */
+    75% {
+      -webkit-transform: translateX(2px) translateY(40px);
+      transform: translateX(2px) translateY(40px);
+    }
+
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes rightPartAnimation {
+    0% {
+      -webkit-transform: none;
+      transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateX(-11px) translateY(-40px);
+      transform: translateX(-11px) translateY(-40px);
+    }
+
+    /* 50% {
+    transform: none;
+  } */
+    75% {
+      -webkit-transform: translateX(2px) translateY(40px);
+      transform: translateX(2px) translateY(40px);
+    }
+
+    100% {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+}

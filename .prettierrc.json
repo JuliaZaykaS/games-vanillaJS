@@ -1,0 +1,52 @@
+{
+  "_comment1": "скобки вокруг единственного параметра стрелочной функции",
+  "arrowParens": "avoid",
+
+  "_comment2": "пробелы между скобками в литералах объектов",
+  "bracketSpacing": true,
+
+  "_comment3": "окончания строк",
+  "endOfLine": "lf",
+
+  "_comment4": "форматирование html с учетом пробелов",
+  "htmlWhitespaceSensitivity": "css",
+
+  "_comment5": "вставлять спец.комментарий в начало файла",
+  "insertPragma": false,
+
+  "_comment6": "на какой позиции выполнять перенос строки",
+  "printWidth": 80,
+
+  "_comment7": "как обрабатывать markdown файлы",
+  "proseWrap": "preserve",
+
+  "_comment8": "свойства объекта в кавычках или без кавычек",
+  "quoteProps": "as-needed",
+
+  "_comment9": "точка с запятой в конце операторов",
+  "semi": false,
+
+  "_comment10": "использовать одинарные кавычки вместо двойных",
+  "singleQuote": true,
+
+  "_comment11": "заменять табуляцию на 4 пробела",
+  "tabWidth": 2,
+
+  "_comment12": "конечные запятые в объектах и массивах",
+  "trailingComma": "es5",
+
+  "_comment13": "делать отступы с помощью табуляции",
+  "useTabs": false,
+
+  "_comment14": "форматировать встроенный код",
+  "embeddedLanguageFormatting": "auto",
+
+  "overrides": [
+    {
+      "files": ["*.css"],
+      "options": {
+        "printWidth": 150
+      }
+    }
+  ]
+}

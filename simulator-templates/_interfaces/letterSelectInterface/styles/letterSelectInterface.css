@@ -1,0 +1,14 @@
+.answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.letterblock {
+  width: 1.5em;
+  border: 1px solid lightgray;
+}
+
+.selected {
+  background-color: aqua;
+}

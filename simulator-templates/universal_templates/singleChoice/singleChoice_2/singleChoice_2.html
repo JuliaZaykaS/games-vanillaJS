@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../../_common_files/main.css" />
+  <link rel="stylesheet" href="../../../_common_files/common_files/common__styles.css" />
+  <link rel="stylesheet" href="styles/singleChoice_2.css" />
+  <!-- стили для стенда -->
+  <link rel="stylesheet" href="styles/singleChoice_2_standStyles.css" />
+
+  <title>Единичный выбор</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav style="margin: 20px" class="navigation">
+      <a href="/">На главную</a>
+    </nav>
+    <h2 class="headerTrainer">
+      EВ-2 Единичный выбор - текстовые (числовые) ответы в виде карточек
+    </h2>
+    <h2>максимум 5-6 элементов</h2>
+    <h3>
+      Считай вслух, начиная со слона. Сколько всего игрушек? <br />Укажи
+      правильный ответ. <br />+ звук(опционально) ⬇
+    </h3>
+    <h4>ответ: 10</h4>
+
+    <!-- в поле id указывается уникальный id для данного задания -->
+    <div class="trainerTaskWrapper" id="singleChoice_2_task-1">
+      <!-- для стенда -->
+      <div class="singleChoice_2_image_lesson_task">
+        <img src="Images_1/onechice_numbers_demo.png" alt="Изображение к заданию" />
+      </div>
+      <!--  -->
+      <!-- оставлено намеренно, т.к. картинка выше только для стенда, а условие стоит на проверку наличия детей -->
+      <div class="singleChoice_2_task_answers"></div>
+    </div>
+
+    <h3>Единичный выбор - Текст + звук (опционально) ⬇</h3>
+    <h4>ответ: Найди оранжевый овощ</h4>
+    <h4>ответ: Морковь</h4>
+    <!-- в поле id указывается уникальный id для данного задания -->
+    <div class="trainerTaskWrapper" id="singleChoice_2_task-2"></div>
+    <h3>Единичный выбор - Только текст ⬇</h3>
+    <h4>Отметь круглую игрушку</h4>
+    <h4>ответ: фиолетовый круглый мячик</h4>
+
+    <!-- в поле id указывается уникальный id для данного задания -->
+    <div class="trainerTaskWrapper" id="singleChoice_2_task-3"></div>
+    <!--  -->
+  </div>
+
+  <!-- JS Scripts -->
+
+  <!-- Занятия -->
+
+  <script src="js-data/singleChoice_2.js" type="module"></script>
+</body>
+
+</html>

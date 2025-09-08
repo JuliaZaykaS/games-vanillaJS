@@ -1,0 +1,40 @@
+.wordSelect_pencilbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 130px;
+}
+.wordSelect_pencil {
+  position: relative;
+  height: 105px;
+  margin: 0 var(--margin-S);
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+.wordSelect_span {
+  font-size: var(--font-size-XXL);
+  margin: 1px;
+  background: rgb(var(--white));
+}
+.wordSelect_selected {
+  cursor: pointer;
+}
+
+.wordSelect {
+  width: 80%;
+  margin: auto;
+  margin-bottom: var(--margin-L);
+}
+.wordSelect_pencil_pencilActive {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}

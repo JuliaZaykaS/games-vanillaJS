@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "jszip": "^3.10.1",
+    "mathjax": "^3.2.2",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0"
+  },
+  "browserslist": [
+    "last 4 version",
+    "> 0.3%"
+  ],
+  "scripts": {
+    "zip": "node automatizationTasks/archiver.js",
+    "zip:ind": "node automatizationTasks/indArchiver.js",
+    "prefix": "postcss --config automatizationTasks ./**/*.css --replace ./**/*.css",
+    "css": "node automatizationTasks/searchCSS.js",
+    "js": "node automatizationTasks/searchJS.js",
+    "material": "node automatizationTasks/searchMaterials.js"
+  }
+}

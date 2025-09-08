@@ -1,0 +1,88 @@
+:root {
+  /* ЦВЕТ ПАЛИТРА */
+  --white: 255, 255, 255; /* rgb(var(--white)) или rgba(var(--white), 0.5) */
+  --black: 0, 0, 0; /* rgb(var(--black)) или rgba(var(--black), 0.5) */
+
+  /* красный */
+  --red-main: lightpink;
+  --red-ordinary: red;
+
+  /* зеленый */
+  --green-main: lightgreen;
+
+  /* серый */
+  --grey-light: #e9ecf4;
+  --grey-medium: #cbcdd3;
+  --grey-dark: #99999b;
+
+  /* синий/голубой */
+  --blue-very-light: #98def0;
+  --blue-light: #0ab7d3; /*rgb(10, 183, 211)*/
+  --blue-grey: #0892a7;
+  --blue-dark-transparent: rgba(29, 101, 255, 0.6431372549019608);
+  --blue-dark: #2965e7;
+
+  /* ШРИФТ И РАЗМЕРЫ */
+  --main-font-family: 'Open Sans', sans-serif;
+
+  /* размеры шрифта*/
+  --font-size-XXS: 10px; /* (10, 11) */
+  --font-size-XS: 12px; /* (12, 13) */
+  --font-size-S: 14px; /* (14,15) */
+  --font-size-M: 16px; /* (16,17) */
+  --font-size-L: 18px;
+  --font-size-XL: 20px;
+  --font-size-XXL: 30px;
+
+  /* БОРДЕРЫ ( + ТЕНИ В КАЧЕСТВЕ БОРДЕРОВ) */
+
+  --normal-border-radius: 12px; /*стандартный размер скруглений границ*/
+  --circle-border-radius: 50%; /* скругление границ до круга*/
+
+  /* размеры бордеров */
+  --border-width-XS: 1px;
+  --border-width-S: 2px;
+  --border-width-M: 3px;
+  --border-width-L: 5px;
+
+  --border-drag-action-elements: var(--border-width-M) solid var(--grey-dark); /*border для элементов, участвующих в проверке*/
+
+  --border-static-elements: var(--border-width-S) solid var(--grey-dark); /*border для статичных элементов (шапки и тп)*/
+
+  --border-dashed-drop-elements: var(--border-width-S) dashed var(--grey-dark); /*border для элементов, участвующих в проверке*/
+
+  --normal-box-shadow: -5px -5px 15px rgb(var(--white)), 5px 5px 15px var(--grey-light); /*основная тень для обрамления элементов */
+
+  --normal-hover-box-shadow: -5px -5px 15px rgb(var(--white)), 5px 5px 15px var(--grey-medium); /*основная тень при выделении элементов */
+
+  /* АНИМАЦИЯ И ПЕРЕХОДЫ */
+
+  --normal-transition: 0.3s ease-in-out; /*основная анимация для смены состояний свойства*/
+  --medium-transition: 0.6s ease-in-out; /*дополнительная анимация для смены состояний свойства*/
+
+  /* ОТСТУПЫ (GAP И ТП)*/
+
+  --gap-XXL: 30px;
+  --gap-XL: 20px;
+
+  --gap-L: 15px; /*стандарт для большинства перетаскиваемых элементов 1*/
+  --gap-M: 10px; /*стандарт для большинства перетаскиваемых элементов 2*/
+
+  --gap-S: 5px;
+  --gap-XS: 2px;
+
+  /*Z-index*/
+  --z-overlay-modal: 999;
+  --z-control-elements: 100;
+  --z-base-elements: 10;
+
+  /*margin*/
+  --margin-S: 5px;
+  --margin-M: 10px;
+  --margin-L: 20px;
+
+  /*padding*/
+  --padding-S: 5px;
+  --padding-M: 10px;
+  --padding-L: 15px;
+}

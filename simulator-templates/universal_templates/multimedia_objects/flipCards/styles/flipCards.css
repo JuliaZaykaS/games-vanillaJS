@@ -1,0 +1,183 @@
+.flipCards_1_flipCardsWrapper {
+  width: 100%;
+
+  gap: var(--gap-M);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flipCards_1_flipCard {
+  height: 250px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform var(--medium-transition);
+  transition: -webkit-transform var(--medium-transition);
+  -o-transition: transform var(--medium-transition);
+  transition: transform var(--medium-transition);
+  transition: transform var(--medium-transition), -webkit-transform var(--medium-transition);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flipCards_1_flipCardCover {
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue-very-light);
+
+  border: var(--border-static-elements);
+  border-radius: var(--normal-border-radius);
+
+  -webkit-box-shadow: var(--normal-box-shadow);
+
+  box-shadow: var(--normal-box-shadow);
+  z-index: var(--z-base-elements);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: var(--font-size-L);
+  padding: var(--padding-L);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  gap: var(--gap-M);
+}
+
+.flipCards_1_flipCardCover:hover {
+  -webkit-box-shadow: var(--normal-hover-box-shadow);
+  box-shadow: var(--normal-hover-box-shadow);
+}
+
+.flipCards_1_flipCardCover:hover .zoom_open_button_white {
+  opacity: 1;
+  -webkit-transition: opacity var(--normal-transition);
+  -o-transition: opacity var(--normal-transition);
+  transition: opacity var(--normal-transition);
+}
+
+.flipCards_1_flipCardFace {
+  position: absolute;
+  background-color: rgb(var(--white));
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  width: 100%;
+  height: 100%;
+
+  border: var(--border-static-elements);
+  border-radius: var(--normal-border-radius);
+
+  -webkit-box-shadow: var(--normal-box-shadow);
+
+  box-shadow: var(--normal-box-shadow);
+  z-index: var(--z-base-elements);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: var(--font-size-L);
+  padding: var(--padding-L);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  gap: var(--gap-M);
+}
+
+.flipCards_1_flipCardFace:hover .zoom_open_button_white {
+  opacity: 1;
+  -webkit-transition: opacity var(--normal-transition);
+  -o-transition: opacity var(--normal-transition);
+  transition: opacity var(--normal-transition);
+}
+
+.flipCards_1_flipCardFace_text,
+.flipCards_1_flipCardCover_text {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* margin-top: 10px; */
+  text-align: center;
+  color: rgb(var(--black));
+}
+
+.flipCards_1_flipCardCoverImg,
+.flipCards_1_flipCardFaceImg {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.flipCards_1_flipCard.flipCards_1_flipCards_flipped {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.flipCards_1_flipCard .zoom_open_button_white {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+@media screen and (max-width: 1366px) {
+  /* .flipCards_1_flipCard {
+    height: 250px;
+  } */
+}
+
+@media screen and (max-width: 1280px) {
+  .flipCards_1_flipCard {
+    height: 200px;
+  }
+
+  .flipCards_1_flipCardFace,
+  .flipCards_1_flipCardCover {
+    font-size: var(--font-size-S);
+    padding: var(--padding-M);
+    gap: var(--gap-S);
+  }
+}

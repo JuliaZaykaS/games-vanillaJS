@@ -1,0 +1,360 @@
+.morfema_razbor_slova {
+  /* border-radius: 0.3em; */
+  /* padding: 0.5em; */
+  padding: var(--padding-S);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_razbor_text {
+  font-size: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_razbor_text_big {
+  font-size: 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_splitter {
+  width: 100%;
+  height: 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_stroka {
+  margin-top: 2em;
+  margin-right: var(--margin-L);
+  display: inline-block;
+  margin-bottom: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_work-area {
+  background: rgb(var(--white));
+  /* padding: 1em; */
+  padding: var(--padding-L);
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_spell,
+.morfema_spell-null {
+  background-color: var(--grey-medium);
+  margin-left: var(--margin-S);
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  text-align: center;
+  border-radius: var(--normal-border-radius);
+  cursor: pointer;
+  z-index: var(--z-base-elements);
+}
+
+.morfema_spell-null {
+  border-radius: 0em;
+  color: var(--grey-medium);
+}
+
+.morfema_choose {
+  background-color: var(--blue-dark-transparent);
+}
+
+.morfema_symbol-area {
+  background: rgb(var(--white));
+  /* margin: 1em auto 2em auto; */
+  margin: 1em 0 2em 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap-M);
+}
+
+.morfema_symbol {
+  display: inline-block;
+  /* margin-left: 1em; */
+  /* margin-left: var(--margin-M); */
+  cursor: pointer;
+  /* width: 2.5em;
+  height: 2.5em; */
+  width: 3em;
+  height: 3em;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_symbol img {
+  width: 3em;
+  height: 3em;
+  opacity: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_symbol img:hover {
+  opacity: 0.7;
+}
+
+.morfema_tooltip div[name='root']:hover::after {
+  content: attr(title) 'Корень';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='base']:hover::after {
+  content: attr(title) 'Основа';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='base_begin']:hover::after {
+  content: attr(title) 'Начало основы слова';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='base_end']:hover::after {
+  content: attr(title) 'Конец основы слова';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='prefix']:hover::after {
+  content: attr(title) 'Приставка';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='suffix']:hover::after {
+  content: attr(title) 'Суффикс';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='connect']:hover::after {
+  content: attr(title) 'Соединительная гласная';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='ending']:hover::after {
+  content: attr(title) 'Окончание';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='null_end']:hover::after {
+  content: attr(title) 'Нулевое окончание';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_tooltip div[name='delete']:hover::after {
+  content: attr(title) 'Удалить морфему';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 0;
+  top: -35px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_ending_morf {
+  display: inline-block;
+  border: var(--border-width-S) solid rgb(var(--black));
+  height: 1.2em;
+  margin-left: 0.1em;
+}
+
+/* .morfema_answer_true {
+  background: #80c468;
+}
+
+.morfema_answer_false {
+  background: #ef493c;
+} */
+
+.morfema_resetWrapper {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_reset_word {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: var(--circle-border-radius);
+  width: 25px;
+  height: 25px;
+  background-color: var(--blue-grey);
+  color: rgb(var(--white));
+  font-weight: 600;
+  font-size: 24px;
+  cursor: pointer;
+  top: -55px;
+  right: -30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.morfema_reset_word:hover::after {
+  content: attr(title) 'сбросить слово';
+  font-size: var(--font-size-S);
+  width: auto;
+  background: var(--grey-light);
+  padding: var(--padding-S) var(--padding-L);
+  color: rgb(var(--black));
+  left: 50%;
+  top: -25px;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: var(--normal-border-radius);
+  box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(var(--black), 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}

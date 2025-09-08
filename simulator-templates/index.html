@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Templates</title>
+  <style>
+    h3 {
+      display: flex;
+    }
+
+    a {
+      display: block;
+      margin: 10px;
+    }
+
+    .found-all {
+      background-color: yellow;
+    }
+
+    .found-current {
+      background-color: lime;
+    }
+
+    #control-block {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      z-index: 1;
+      padding: 5px 5px 5px 50px;
+      background-color: #eef2f4;
+      background-repeat: no-repeat;
+      background-size: 8%;
+      background-position: 95%;
+    }
+
+    .no_active_link {
+      opacity: 0.4;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    p#first {
+      cursor: pointer;
+      font-family: cursive;
+      text-indent: 22px;
+      line-height: 33px;
+      border: 1px solid #d2d2d2;
+      background: #70bfe4;
+      font-size: 18px;
+    }
+
+    p#first_yelloy {
+      cursor: pointer;
+      background: #ff9900;
+      font-size: 18px;
+      color: white;
+      text-indent: 22px;
+      line-height: 33px;
+      border: 1px SOLID #ff9900;
+    }
+
+    .downloadLink {
+      position: absolute;
+      font-size: 15pt;
+    }
+
+    .instraction_download {
+      left: 75%;
+    }
+
+    .utcf_download {
+      top: 150px;
+      left: 75%;
+    }
+
+    .all_download {
+      top: 195px;
+      left: 75%;
+    }
+
+    .indiv_open {
+      position: relative;
+      float: right;
+    }
+
+    .indiv_button {
+      font-size: 17px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bffc8;
+      color: #fff;
+      border: none;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .attention_message {
+      color: darkgreen;
+      font-style: italic;
+      margin-block-start: 0.5em;
+      margin-block-end: 0em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="control-block">
+    <p>
+      <label>Начните печатать текст: <input type="text" id="input-text" /></label>
+    </p>
+    <p>
+      <button type="button" id="button-begin">Найти сначала</button>
+      <button type="button" id="button-previous">Назад</button>
+      <button type="button" id="button-next">Вперёд</button>
+      <button type="button" id="button-clear">Очистить поиск</button>
+      <label><input type="checkbox" id="checkbox-all" checked />Подсветить
+        все</label>
+    </p>
+  </div>
+  <div id="search-block">
+
+    <ol>
+      <h2>Работа с контентом в виде карточек</h2>
+      <li>
+        <h3>
+          <a href="./universal_templates/singleChoice/singleChoice_3/singleChoice_3.html">Единичный выбор</a>
+        </h3>
+      </li>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/multipleChoice/multipleChoice_3/multipleChoice_3.html">Множественный выбор</a>
+        </h3>
+      </li>
+       <li>
+        <h3>
+          <a href="./universal_templates/pairUpTheCards/pairUpTheCards.html">Игра найди пару</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/memoryGame/memoryGame.html">Игра мемори</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/multimedia_objects/flipCards/flipCards.html">Загадки</a>
+        </h3>
+      </li>
+    </ol>
+
+    <ol>
+      <h2>Сопоставления элементов</h2>
+      <li>
+        <h3>
+          <a href="./universal_templates/pairsByLines/pairsByLines/pairsByLines.html">
+            Соединение линиями</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/dragAndDropElements/dnd_OneToOne/dnd_OneToOne.html">Перетаскивание элементов без копирования</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/dragAndDropElements/dnd_copy_OneToOne/dnd_copy-OneToOne.html">Перетаскивание элементов с копированием</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/dragAndDropElements/dnd_freeFieldvertical/dnd_FreeFieldVertical.html">Танграм</a>
+        </h3>
+      </li>
+    </ol>
+    <ol>
+      <h2>Работа с текстом</h2>
+      <li>
+        <h3>
+          <a href="./universal_templates/textChanging/textChanging/textChanging.html">Исправление слов в тексте</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/select_inText/wordSelect/wordSelect.html">Выделение цветом слов</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/select_inText/morfema/morfema.html">Морфемный разбор слов</a>
+        </h3>
+      </li>
+    </ol>
+
+
+    <ol>
+      <h2>С анимацией</h2>
+      <li>
+        <h3>
+          <a href="./universal_templates/dragAndDropElements/dnd_scales/dnd_scales.html">Весы</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/lettertracing/Lettertracing/letterTracing.html">Обведи букву</a>
+        </h3>
+      </li>
+    </ol>
+    <ol>
+      <h2>Работа с свг</h2>
+       <li>
+        <h3>
+          <a href="./universal_templates/lineSelection\repeatLines\repeatLines.html">Повтори фигуру по линиям</a>
+        </h3>
+      </li>
+      <li>
+        <h3>
+          <a href="./universal_templates/coloringBook/coloringBook_noCheck/coloringBook_noCheck.html">Раскраска (без проверки)</a>
+        </h3>
+      </li>
+    </ol>
+
+  </div>
+
+
+  <p id="first" class="listClosed" style="display: none;">
+    Показать блок c тренажёрами вне каталога
+  </p>
+  <p id="first_yelloy" class="listOpened" style="display: none">
+    Скрыть блок
+  </p>
+  </div>
+  <div id="second_hide" class="hiddenBlock" style="display: none">
+    <!-- Начало разворачивающегося списка -->
+    <!-- Конец разворачивающегося списка -->
+  </div>
+
+
+  <script>
+    const listClosed = document.querySelector('.listClosed')
+    const listOpened = document.querySelector('.listOpened')
+    const hiddenBlock = document.querySelector('.hiddenBlock')
+    listClosed.addEventListener('click', openList)
+    listOpened.addEventListener('click', closeList)
+    function openList() {
+      hiddenBlock.setAttribute(
+        'style',
+        'opacity:1; transition: 1s; height: 100%;'
+      )
+      listClosed.setAttribute('style', 'display: none')
+      listOpened.setAttribute('style', 'display: block')
+    }
+    function closeList() {
+      hiddenBlock.setAttribute('style', 'display: none')
+      listOpened.setAttribute('style', 'display: none')
+      listClosed.setAttribute('style', 'display: block')
+    }
+    function textSearch() {
+      function wrapTextInTextNode(textNode, searchText, wrapBlank) {
+        let textContent = textNode.textContent
+        let lowerTextContent = textContent.toLocaleLowerCase()
+        let resNodes = []
+        let beginIndex = 0
+        while (true) {
+          let index = lowerTextContent.indexOf(searchText, beginIndex)
+          if (index === -1) break
+
+          let prevText = textContent.slice(beginIndex, index)
+          if (prevText.length > 0)
+            resNodes.push(document.createTextNode(prevText))
+
+          let elem = wrapBlank.cloneNode(false)
+          elem.textContent = textContent.slice(
+            index,
+            index + searchText.length
+          )
+          resNodes.push(elem)
+
+          beginIndex = index + searchText.length
+        }
+        if (beginIndex === 0) return resNodes
+        let prevText = textContent.slice(beginIndex)
+        if (prevText.length > 0)
+          resNodes.push(document.createTextNode(prevText))
+        return resNodes
+      }
+      function wrapTextNodes(elementNode, searchText, wrapBlank) {
+        let childNodes = Array.from(elementNode.childNodes)
+        for (let child of childNodes)
+          switch (child.nodeType) {
+            case Node.TEXT_NODE:
+              let nodesArr = wrapTextInTextNode(child, searchText, wrapBlank)
+              if (nodesArr.length === 0) break
+              let prev = child
+              for (let node of nodesArr) {
+                prev.after(node)
+                prev = node
+              }
+              child.remove()
+              break
+            case Node.ELEMENT_NODE:
+              wrapTextNodes(child, searchText, wrapBlank)
+              break
+          }
+      }
+
+      function unwrapTextNodes(elementNode, wrapBlank) {
+        let wrappedNodes = elementNode.querySelectorAll(
+          '.' + wrapBlank.className
+        )
+        for (let i = 0; i < wrappedNodes.length; ++i) {
+          let prevNode = wrappedNodes[i].previousSibling
+          let nextNode = wrappedNodes[i].nextSibling
+
+          let textNode = document.createTextNode(wrappedNodes[i].textContent)
+          wrappedNodes[i].replaceWith(textNode)
+
+          if (prevNode && prevNode.nodeType === Node.TEXT_NODE) {
+            prevNode.textContent += textNode.textContent
+            textNode.remove()
+            textNode = prevNode
+          }
+          if (nextNode && nextNode.nodeType === Node.TEXT_NODE) {
+            textNode.textContent += nextNode.textContent
+            nextNode.remove()
+          }
+        }
+      }
+
+      //Функции для управления прокруткой страницы
+
+      function scrollToFoundElement(foundElement, topOffset) {
+        let elementRect = foundElement.getBoundingClientRect()
+        let windowWidth = document.documentElement.clientWidth
+        let windowHeight = document.documentElement.clientHeight
+        const borderShift = Math.floor(
+          Math.min(20, windowWidth, windowHeight) * 0.5
+        )
+
+        let middleX = windowWidth * 0.5
+        let middleY = (windowHeight - topOffset) * 0.5 + topOffset
+        if (middleY < 0) middleY = 0
+
+        let scrollX = 0,
+          scrollY = 0
+        if (elementRect.left < middleX) {
+          if (elementRect.left < borderShift)
+            scrollX = elementRect.left - borderShift
+        } else {
+          if (elementRect.right > windowWidth - borderShift)
+            scrollX = elementRect.right - (windowWidth - borderShift)
+        }
+        if (elementRect.top < middleY) {
+          if (elementRect.top < topOffset + borderShift)
+            scrollY = elementRect.top - (topOffset + borderShift)
+        } else {
+          if (elementRect.bottom > windowHeight - borderShift)
+            scrollY = elementRect.bottom - (windowHeight - borderShift)
+        }
+        window.scrollBy(scrollX, scrollY)
+      }
+
+      function getElementPositionInDocument(element) {
+        let elementRect = element.getBoundingClientRect()
+        return {
+          left: elementRect.left + document.documentElement.scrollLeft,
+          top: elementRect.top + document.documentElement.scrollTop,
+        }
+      }
+
+      function elementPositionInDocumentToArrayPosition(
+        elementsArray,
+        elementPositionInDocument
+      ) {
+        let arrayPosition = 0
+        let minY = Number.POSITIVE_INFINITY
+        let minX = Number.POSITIVE_INFINITY
+        let { left, top } = elementPositionInDocument
+        let documentScrollLeft = document.documentElement.scrollLeft
+        let documentScrollTop = document.documentElement.scrollTop
+
+        for (let i = 0; i < elementsArray.length; ++i) {
+          let elementRect = elementsArray[i].getBoundingClientRect()
+          let x = elementRect.left + documentScrollLeft
+          let y = elementRect.top + documentScrollTop
+          let yb = elementRect.bottom + documentScrollTop
+          if (y < minY || (y === minY && x < minX))
+            if ((y <= top && yb >= top && left <= x) || y > top) {
+              minY = y
+              minX = x
+              arrayPosition = i
+            }
+        }
+        return arrayPosition
+      }
+
+      //Назначаем обработчики событий на элементы управления страницы
+
+      const classNameFoundAll = 'found-all' //Класс для подсвечивания всех результатов поиска
+      const classNameFoundCurrent = 'found-current' //Класс для подсвечивания текущего результата
+      const wrapBlank = document.createElement('span') //Заготовка для оборачивания результатов поиска
+      wrapBlank.className = 'found-result' //Класс для идентификации результатов поиска.
+
+      const searchBlock = document.getElementById('search-block')
+      const controlBlock = document.getElementById('control-block')
+
+      const controlInputText = document.getElementById('input-text')
+      const controlButtonBegin = document.getElementById('button-begin')
+      const controlButtonPrevious = document.getElementById('button-previous')
+      const controlButtonNext = document.getElementById('button-next')
+      const controlCheckboxAll = document.getElementById('checkbox-all')
+
+      const controlClearInput = document.getElementById('button-clear')
+      controlClearInput.addEventListener('click', resetInput, false)
+      function resetInput() {
+        controlInputText.value = ''
+        unwrapTextNodes(searchBlock, wrapBlank)
+      }
+
+      const controlBlockHeight = controlBlock.offsetHeight + 5
+      searchBlock.style.marginTop = controlBlockHeight + 'px'
+
+      let foundElements = [] //Коллекция узлов, имеющих класс "found-result"
+      let foundElementsPos = -1 //Индекс текущего подсвеченного узла в коллекции foundElements
+      let foundElementPositionInDocument = {
+        left: 0,
+        top: 0,
+      } //Координаты текущего подсвеченного узла, либо клика
+      let flagClick = false
+
+      searchBlock.addEventListener('click', handlerSearchBlock)
+
+      controlInputText.addEventListener('input', handlerInputText)
+      controlButtonBegin.addEventListener('click', handlerButtonBegin)
+      controlButtonPrevious.addEventListener('click', () =>
+        handlerNextPrevious('previous')
+      )
+      controlButtonNext.addEventListener('click', () =>
+        handlerNextPrevious('next')
+      )
+      controlCheckboxAll.addEventListener('input', handlerCheckboxAll)
+      document.addEventListener('keydown', handlerKeydown)
+
+      handlerInputText()
+
+      function handlerSearchBlock(event) {
+        flagClick = true
+        foundElementPositionInDocument = {
+          left: event.clientX + document.documentElement.scrollLeft,
+          top: event.clientY + document.documentElement.scrollTop,
+        }
+      }
+
+      function handlerInputText() {
+        unwrapTextNodes(searchBlock, wrapBlank)
+
+        foundElements = []
+        foundElementsPos = -1
+        let searchText = controlInputText.value.trim().toLocaleLowerCase()
+        if (searchText.length > 0) {
+          wrapTextNodes(searchBlock, searchText, wrapBlank)
+          foundElements = searchBlock.querySelectorAll(
+            '.' + wrapBlank.className
+          )
+          if (foundElements.length > 0) {
+            if (controlCheckboxAll.checked)
+              for (let i = 0; i < foundElements.length; ++i)
+                foundElements[i].classList.add(classNameFoundAll)
+
+            flagClick = false
+            foundElementsPos = elementPositionInDocumentToArrayPosition(
+              foundElements,
+              foundElementPositionInDocument
+            )
+            foundElementPositionInDocument = getElementPositionInDocument(
+              foundElements[foundElementsPos]
+            )
+            foundElements[foundElementsPos].classList.add(
+              classNameFoundCurrent
+            )
+            scrollToFoundElement(
+              foundElements[foundElementsPos],
+              controlBlockHeight
+            )
+          }
+        }
+      }
+
+      function handlerButtonBegin() {
+        foundElementPositionInDocument = {
+          left: 0,
+          top: 0,
+        }
+        handlerInputText()
+      }
+
+      function handlerNextPrevious(strNextOrPrevious) {
+        if (foundElements.length === 0) return
+
+        foundElements[foundElementsPos].classList.toggle(
+          classNameFoundCurrent
+        )
+
+        let inc = 1
+        if (flagClick) {
+          flagClick = false
+          inc = 0
+          foundElementsPos = elementPositionInDocumentToArrayPosition(
+            foundElements,
+            foundElementPositionInDocument
+          )
+        }
+        foundElementsPos += strNextOrPrevious === 'next' ? inc : -1
+        if (foundElementsPos >= foundElements.length) foundElementsPos = 0
+        else if (foundElementsPos < 0)
+          foundElementsPos = foundElements.length - 1
+
+        foundElementPositionInDocument = getElementPositionInDocument(
+          foundElements[foundElementsPos]
+        )
+        foundElements[foundElementsPos].classList.toggle(
+          classNameFoundCurrent
+        )
+        scrollToFoundElement(
+          foundElements[foundElementsPos],
+          controlBlockHeight
+        )
+      }
+
+      function handlerCheckboxAll() {
+        const actionName = controlCheckboxAll.checked ? 'add' : 'remove'
+        for (let i = 0; i < foundElements.length; ++i)
+          foundElements[i].classList[actionName](classNameFoundAll)
+      }
+      function handlerKeydown(event) {
+        if (event.code === 'KeyF' && (event.ctrlKey || event.metaKey)) {
+          event.preventDefault()
+          controlInputText.focus()
+        }
+      }
+    }
+
+    textSearch()
+  </script>
+</body>
+
+</html>
